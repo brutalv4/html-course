@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Presentation</title>
+  </head>
+  <body>
+    <!-- Page 1 (Intro) -->
+    <section id="page-1" class="page">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quis in
+        nesciunt architecto eum, magnam, deleniti incidunt exercitationem, porro
+        esse dolor minus dignissimos perferendis nisi optio natus? Dolorum
+        sapiente, optio dolores harum earum possimus architecto, voluptatum
+        excepturi inventore, illo sint?
+      </p>
+      <div>
+        <a href="#page-2" class="btn"
+          >Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+      <h1>Page 2</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quis in
+        nesciunt architecto eum, magnam, deleniti incidunt exercitationem, porro
+        esse dolor minus dignissimos perferendis nisi optio natus? Dolorum
+        sapiente, optio dolores harum earum possimus architecto, voluptatum
+        excepturi inventore, illo sint?
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark"
+          >Prev Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-3" class="btn"
+          >Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+      <h1>Page 3</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quis in
+        nesciunt architecto eum, magnam, deleniti incidunt exercitationem, porro
+        esse dolor minus dignissimos perferendis nisi optio natus? Dolorum
+        sapiente, optio dolores harum earum possimus architecto, voluptatum
+        excepturi inventore, illo sint?
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark"
+          >Prev Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-4" class="btn"
+          >Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+      <h1>Page 4</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quis in
+        nesciunt architecto eum, magnam, deleniti incidunt exercitationem, porro
+        esse dolor minus dignissimos perferendis nisi optio natus? Dolorum
+        sapiente, optio dolores harum earum possimus architecto, voluptatum
+        excepturi inventore, illo sint?
+      </p>
+      <div>
+        <a href="#page-3" class="btn"
+          >Prev Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+      </div>
+    </section>
+
+    <script
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {
+        window.jQuery &&
+          $('.btn').on('click', function (event) {
+            const { hash } = this;
+            if (hash) {
+              event.preventDefault();
+
+              $('html, body').animate(
+                {
+                  scrollTop: $(hash).offset().top,
+                },
+                600
+              );
+            }
+          });
+      };
+    </script>
+  </body>
+</html>
