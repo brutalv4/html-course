@@ -1,5 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "files.autoSave": "onFocusChange",
-  "liveServer.settings.root": "/presentation_website"
+  "files.autoSave": "onFocusChange"
+  // "liveServer.settings.root": "/hamburger_overlay_menu"
 }
