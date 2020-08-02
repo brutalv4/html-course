@@ -1,0 +1,11 @@
+@import 'variables';
+
+// Transform mixin
+@mixin transform($prop) {
+  transform: $prop;
+
+  @if $debug {
+    $this: &;
+    @debug $this, transform applied $prop;
+  }
+}

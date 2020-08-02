@@ -1,0 +1,19 @@
+@import 'variables';
+
+// Set text color
+@function set-text-color($color) {
+  $is-light: lightness($color) > 50;
+
+  @if $debug {
+    $this: &;
+
+    @debug $this,
+      lightness is lightness($color) #{':'} if(
+          $is-light,
+          $dark-color,
+          $light-color
+        ) text color set for $color background;
+  }
+
+  @return if($is-light, $dark-color, $light-color);
+}
