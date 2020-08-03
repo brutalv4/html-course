@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to EdgeLedger",
+      "name": "Attach to LiveServer",
       "port": 9222,
       "request": "attach",
       "type": "pwa-chrome",
-      "webRoot": "${workspaceFolder}/edgeledger_website",
-      "url": "http://127.0.0.1:5500/edgeledger_website*"
+      "webRoot": "${workspaceFolder}/dropdown",
+      "url": "http://127.0.0.1:5500"
     }
   ]
 }
